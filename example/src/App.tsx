@@ -1,6 +1,6 @@
-import * as React from 'react';
-import { StyleSheet, View, Text } from 'react-native';
-import ThePlazaUi from 'react-native-the-plaza-ui';
+import * as React from "react";
+import { StyleSheet, View, Text } from "react-native";
+import ThePlazaUi from "react-native-the-plaza-ui";
 
 export default function App() {
   const [result, setResult] = React.useState<number | undefined>();
@@ -19,7 +19,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
