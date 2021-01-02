@@ -1,20 +1,7 @@
-import * as React from "react";
-import { StyleSheet, View, Text } from "react-native";
-import ThePlazaUi from "react-native-the-plaza-ui";
+import React from "react";
+import { Alert, StyleSheet, View } from "react-native";
 
-export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
-
-  React.useEffect(() => {
-    ThePlazaUi.multiply(3, 7).then(setResult);
-  }, []);
-
-  return (
-    <View style={styles.container}>
-      <Text>Result: {result}</Text>
-    </View>
-  );
-}
+import { Button } from "react-native-the-plaza-ui";
 
 const styles = StyleSheet.create({
   container: {
@@ -23,3 +10,15 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
 });
+
+export default function App() {
+  const handleButtonPress = () => {
+    Alert.alert("Button pressed");
+  };
+
+  return (
+    <View style={styles.container}>
+      <Button onPress={handleButtonPress}>Button</Button>
+    </View>
+  );
+}
